@@ -1,0 +1,78 @@
+{
+  "name": "021b9a2642083911b58c",
+  "layouts": [
+    {
+      "id": 0,
+      "position": {
+        "x": 384.91921005385996,
+        "y": 55.152603231597844,
+        "z": 1,
+        "width": 739.964093357271,
+        "height": 592.89048473967682
+      }
+    }
+  ],
+  "singleVisual": {
+    "visualType": "map",
+    "projections": {
+      "Category": [
+        {
+          "queryRef": "Customer.Country-Region",
+          "active": true
+        }
+      ],
+      "Size": [
+        {
+          "queryRef": "Sum(Sales.Sales Amount)"
+        }
+      ]
+    },
+    "prototypeQuery": {
+      "Version": 2,
+      "From": [
+        {
+          "Name": "c",
+          "Entity": "Customer",
+          "Type": 0
+        },
+        {
+          "Name": "s",
+          "Entity": "Sales",
+          "Type": 0
+        }
+      ],
+      "Select": [
+        {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Source": "c"
+              }
+            },
+            "Property": "Country-Region"
+          },
+          "Name": "Customer.Country-Region",
+          "NativeReferenceName": "Country-Region"
+        },
+        {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Source": "s"
+                  }
+                },
+                "Property": "Sales Amount"
+              }
+            },
+            "Function": 0
+          },
+          "Name": "Sum(Sales.Sales Amount)",
+          "NativeReferenceName": "Sales Amount"
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}
