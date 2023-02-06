@@ -73,6 +73,21 @@
         }
       ]
     },
-    "drillFilterOtherVisuals": true
+    "drillFilterOtherVisuals": true,
+    "vcObjects": {
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Country-Region Sales Analysis'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
   }
 }
