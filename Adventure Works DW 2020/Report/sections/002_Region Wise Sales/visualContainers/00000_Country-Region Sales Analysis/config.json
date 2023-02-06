@@ -1,27 +1,27 @@
 {
-  "name": "ce9f5962bd8f4c319eb8",
+  "name": "021b9a2642083911b58c",
   "layouts": [
     {
       "id": 0,
       "position": {
-        "x": 82.728904847396763,
-        "y": 0,
+        "x": 384.91921005385996,
+        "y": 55.152603231597844,
         "z": 1,
-        "width": 1158.2046678635547,
-        "height": 515.90664272890479
+        "width": 739.964093357271,
+        "height": 592.89048473967682
       }
     }
   ],
   "singleVisual": {
-    "visualType": "clusteredColumnChart",
+    "visualType": "map",
     "projections": {
       "Category": [
         {
-          "queryRef": "Customer.City",
+          "queryRef": "Customer.Country-Region",
           "active": true
         }
       ],
-      "Y": [
+      "Size": [
         {
           "queryRef": "Sum(Sales.Sales Amount)"
         }
@@ -49,10 +49,10 @@
                 "Source": "c"
               }
             },
-            "Property": "City"
+            "Property": "Country-Region"
           },
-          "Name": "Customer.City",
-          "NativeReferenceName": "City"
+          "Name": "Customer.Country-Region",
+          "NativeReferenceName": "Country-Region"
         },
         {
           "Aggregation": {
@@ -71,31 +71,24 @@
           "Name": "Sum(Sales.Sales Amount)",
           "NativeReferenceName": "Sales Amount"
         }
-      ],
-      "OrderBy": [
-        {
-          "Direction": 2,
-          "Expression": {
-            "Aggregation": {
-              "Expression": {
-                "Column": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Source": "s"
-                    }
-                  },
-                  "Property": "Sales Amount"
-                }
-              },
-              "Function": 0
-            }
-          }
-        }
       ]
     },
     "drillFilterOtherVisuals": true,
-    "hasDefaultSort": true,
+<<<<<<< HEAD:Adventure Works DW 2020/Report/sections/002_Region Wise Sales/visualContainers/00000_map (021b9)/config.json
     "objects": {
+      "bubbles": [
+        {
+          "properties": {
+            "bubbleSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "5L"
+                }
+              }
+            }
+          }
+        }
+      ],
       "dataPoint": [
         {
           "properties": {
@@ -104,8 +97,8 @@
                 "color": {
                   "expr": {
                     "ThemeDataColor": {
-                      "ColorId": 2,
-                      "Percent": -0.25
+                      "ColorId": 4,
+                      "Percent": -0.5
                     }
                   }
                 }
@@ -115,10 +108,13 @@
         }
       ]
     },
+=======
+>>>>>>> eae8222e62a2444bb35af02284c341ed8cacfc49:Adventure Works DW 2020/Report/sections/002_Region Wise Sales/visualContainers/00000_Country-Region Sales Analysis/config.json
     "vcObjects": {
       "title": [
         {
           "properties": {
+<<<<<<< HEAD:Adventure Works DW 2020/Report/sections/002_Region Wise Sales/visualContainers/00000_map (021b9)/config.json
             "fontColor": {
               "solid": {
                 "color": {
@@ -128,6 +124,12 @@
                       "Percent": -0.25
                     }
                   }
+=======
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Country-Region Sales Analysis'"
+>>>>>>> eae8222e62a2444bb35af02284c341ed8cacfc49:Adventure Works DW 2020/Report/sections/002_Region Wise Sales/visualContainers/00000_Country-Region Sales Analysis/config.json
                 }
               }
             }

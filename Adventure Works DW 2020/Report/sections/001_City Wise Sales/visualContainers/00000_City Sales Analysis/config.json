@@ -1,27 +1,27 @@
 {
-  "name": "021b9a2642083911b58c",
+  "name": "ce9f5962bd8f4c319eb8",
   "layouts": [
     {
       "id": 0,
       "position": {
-        "x": 384.91921005385996,
-        "y": 55.152603231597844,
+        "x": 82.728904847396763,
+        "y": 0,
         "z": 1,
-        "width": 739.964093357271,
-        "height": 592.89048473967682
+        "width": 1158.2046678635547,
+        "height": 515.90664272890479
       }
     }
   ],
   "singleVisual": {
-    "visualType": "map",
+    "visualType": "clusteredColumnChart",
     "projections": {
       "Category": [
         {
-          "queryRef": "Customer.Country-Region",
+          "queryRef": "Customer.City",
           "active": true
         }
       ],
-      "Size": [
+      "Y": [
         {
           "queryRef": "Sum(Sales.Sales Amount)"
         }
@@ -49,10 +49,10 @@
                 "Source": "c"
               }
             },
-            "Property": "Country-Region"
+            "Property": "City"
           },
-          "Name": "Customer.Country-Region",
-          "NativeReferenceName": "Country-Region"
+          "Name": "Customer.City",
+          "NativeReferenceName": "City"
         },
         {
           "Aggregation": {
@@ -71,23 +71,32 @@
           "Name": "Sum(Sales.Sales Amount)",
           "NativeReferenceName": "Sales Amount"
         }
-      ]
-    },
-    "drillFilterOtherVisuals": true,
-    "objects": {
-      "bubbles": [
+      ],
+      "OrderBy": [
         {
-          "properties": {
-            "bubbleSize": {
-              "expr": {
-                "Literal": {
-                  "Value": "5L"
+          "Direction": 2,
+          "Expression": {
+            "Aggregation": {
+              "Expression": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Source": "s"
+                    }
+                  },
+                  "Property": "Sales Amount"
                 }
-              }
+              },
+              "Function": 0
             }
           }
         }
-      ],
+      ]
+    },
+    "drillFilterOtherVisuals": true,
+    "hasDefaultSort": true,
+<<<<<<< HEAD:Adventure Works DW 2020/Report/sections/001_City Wise Sales/visualContainers/00000_clusteredColumnChart (ce9f5)/config.json
+    "objects": {
       "dataPoint": [
         {
           "properties": {
@@ -96,8 +105,8 @@
                 "color": {
                   "expr": {
                     "ThemeDataColor": {
-                      "ColorId": 4,
-                      "Percent": -0.5
+                      "ColorId": 2,
+                      "Percent": -0.25
                     }
                   }
                 }
@@ -107,10 +116,13 @@
         }
       ]
     },
+=======
+>>>>>>> eae8222e62a2444bb35af02284c341ed8cacfc49:Adventure Works DW 2020/Report/sections/001_City Wise Sales/visualContainers/00000_City Sales Analysis/config.json
     "vcObjects": {
       "title": [
         {
           "properties": {
+<<<<<<< HEAD:Adventure Works DW 2020/Report/sections/001_City Wise Sales/visualContainers/00000_clusteredColumnChart (ce9f5)/config.json
             "fontColor": {
               "solid": {
                 "color": {
@@ -120,6 +132,12 @@
                       "Percent": -0.25
                     }
                   }
+=======
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'City Sales Analysis'"
+>>>>>>> eae8222e62a2444bb35af02284c341ed8cacfc49:Adventure Works DW 2020/Report/sections/001_City Wise Sales/visualContainers/00000_City Sales Analysis/config.json
                 }
               }
             }
