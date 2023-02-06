@@ -94,6 +94,21 @@
       ]
     },
     "drillFilterOtherVisuals": true,
-    "hasDefaultSort": true
+    "hasDefaultSort": true,
+    "vcObjects": {
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'City Sales Analysis'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
   }
 }
