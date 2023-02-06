@@ -1,4 +1,24 @@
 {
+  "objects": {
+    "dataPoint": [
+      {
+        "properties": {
+          "fill": {
+            "solid": {
+              "color": {
+                "expr": {
+                  "ThemeDataColor": {
+                    "ColorId": 2,
+                    "Percent": -0.25
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
   "projectionOrdering": {
     "Category": [
       0
@@ -33,6 +53,37 @@
     "Filters": [
       {
         "type": 7
+      },
+      {
+        "type": 0,
+        "expression": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Customer"
+              }
+            },
+            "Property": "City"
+          }
+        }
+      },
+      {
+        "type": 2,
+        "expression": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Sales"
+                  }
+                },
+                "Property": "Sales Amount"
+              }
+            },
+            "Function": 0
+          }
+        }
       }
     ]
   },
