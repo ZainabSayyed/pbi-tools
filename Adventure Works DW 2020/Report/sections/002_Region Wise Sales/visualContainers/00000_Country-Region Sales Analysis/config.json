@@ -74,62 +74,14 @@
       ]
     },
     "drillFilterOtherVisuals": true,
-<<<<<<< HEAD:Adventure Works DW 2020/Report/sections/002_Region Wise Sales/visualContainers/00000_map (021b9)/config.json
-    "objects": {
-      "bubbles": [
-        {
-          "properties": {
-            "bubbleSize": {
-              "expr": {
-                "Literal": {
-                  "Value": "5L"
-                }
-              }
-            }
-          }
-        }
-      ],
-      "dataPoint": [
-        {
-          "properties": {
-            "fill": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 4,
-                      "Percent": -0.5
-                    }
-                  }
-                }
-              }
-            }
-          }
-        }
-      ]
-    },
-=======
->>>>>>> eae8222e62a2444bb35af02284c341ed8cacfc49:Adventure Works DW 2020/Report/sections/002_Region Wise Sales/visualContainers/00000_Country-Region Sales Analysis/config.json
     "vcObjects": {
       "title": [
         {
           "properties": {
-<<<<<<< HEAD:Adventure Works DW 2020/Report/sections/002_Region Wise Sales/visualContainers/00000_map (021b9)/config.json
-            "fontColor": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 3,
-                      "Percent": -0.25
-                    }
-                  }
-=======
             "text": {
               "expr": {
                 "Literal": {
                   "Value": "'Country-Region Sales Analysis'"
->>>>>>> eae8222e62a2444bb35af02284c341ed8cacfc49:Adventure Works DW 2020/Report/sections/002_Region Wise Sales/visualContainers/00000_Country-Region Sales Analysis/config.json
                 }
               }
             }
