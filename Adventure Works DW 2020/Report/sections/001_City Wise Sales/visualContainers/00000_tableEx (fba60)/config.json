@@ -1,0 +1,121 @@
+{
+  "name": "fba602febfa3b84f315f",
+  "layouts": [
+    {
+      "id": 0,
+      "position": {
+        "x": 82.728904847396763,
+        "y": 526.24775583482938,
+        "z": 2,
+        "width": 1149.0125673249552,
+        "height": 194.18312387791741
+      }
+    }
+  ],
+  "singleVisual": {
+    "visualType": "tableEx",
+    "projections": {
+      "Values": [
+        {
+          "queryRef": "Customer.City"
+        },
+        {
+          "queryRef": "Sales.Rank"
+        },
+        {
+          "queryRef": "Customer.Customer"
+        },
+        {
+          "queryRef": "Sum(Sales.Sales Amount)"
+        }
+      ]
+    },
+    "prototypeQuery": {
+      "Version": 2,
+      "From": [
+        {
+          "Name": "s",
+          "Entity": "Sales",
+          "Type": 0
+        },
+        {
+          "Name": "c",
+          "Entity": "Customer",
+          "Type": 0
+        }
+      ],
+      "Select": [
+        {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Source": "s"
+                  }
+                },
+                "Property": "Sales Amount"
+              }
+            },
+            "Function": 0
+          },
+          "Name": "Sum(Sales.Sales Amount)",
+          "NativeReferenceName": "Customer2"
+        },
+        {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Source": "c"
+              }
+            },
+            "Property": "Customer"
+          },
+          "Name": "Customer.Customer",
+          "NativeReferenceName": "Customer"
+        },
+        {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Source": "s"
+              }
+            },
+            "Property": "Rank"
+          },
+          "Name": "Sales.Rank",
+          "NativeReferenceName": "Rank"
+        },
+        {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Source": "c"
+              }
+            },
+            "Property": "City"
+          },
+          "Name": "Customer.City",
+          "NativeReferenceName": "City"
+        }
+      ],
+      "OrderBy": [
+        {
+          "Direction": 1,
+          "Expression": {
+            "Column": {
+              "Expression": {
+                "SourceRef": {
+                  "Source": "c"
+                }
+              },
+              "Property": "City"
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true,
+    "filterSortOrder": 3
+  }
+}
