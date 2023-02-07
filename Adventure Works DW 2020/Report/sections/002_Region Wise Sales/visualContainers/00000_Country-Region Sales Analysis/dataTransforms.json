@@ -62,39 +62,6 @@
         "Type": 1,
         "Format": "\\$#,0.00;(\\$#,0.00);\\$#,0.00"
       }
-    ],
-    "Filters": [
-      {
-        "type": 0,
-        "expression": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Customer"
-              }
-            },
-            "Property": "Country-Region"
-          }
-        }
-      },
-      {
-        "type": 2,
-        "expression": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "Sales"
-                  }
-                },
-                "Property": "Sales Amount"
-              }
-            },
-            "Function": 0
-          }
-        }
-      }
     ]
   },
   "visualElements": [

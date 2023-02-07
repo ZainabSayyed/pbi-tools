@@ -1,0 +1,105 @@
+{
+  "name": "a22af8d42b2e69a48d8e",
+  "layouts": [
+    {
+      "id": 0,
+      "position": {
+        "x": 0,
+        "y": 55,
+        "width": 740,
+        "height": 593,
+        "z": 2
+      }
+    }
+  ],
+  "singleVisual": {
+    "visualType": "tableEx",
+    "projections": {
+      "Values": [
+        {
+          "queryRef": "Customer.Country-Region"
+        },
+        {
+          "queryRef": "Customer.Customer"
+        },
+        {
+          "queryRef": "Sales.Rank"
+        },
+        {
+          "queryRef": "Sum(Sales.Sales Amount)"
+        }
+      ]
+    },
+    "prototypeQuery": {
+      "Version": 2,
+      "From": [
+        {
+          "Name": "c",
+          "Entity": "Customer",
+          "Type": 0
+        },
+        {
+          "Name": "s",
+          "Entity": "Sales",
+          "Type": 0
+        }
+      ],
+      "Select": [
+        {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Source": "c"
+              }
+            },
+            "Property": "Country-Region"
+          },
+          "Name": "Customer.Country-Region",
+          "NativeReferenceName": "Country-Region"
+        },
+        {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Source": "c"
+              }
+            },
+            "Property": "Customer"
+          },
+          "Name": "Customer.Customer",
+          "NativeReferenceName": "Customer"
+        },
+        {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Source": "s"
+              }
+            },
+            "Property": "Rank"
+          },
+          "Name": "Sales.Rank",
+          "NativeReferenceName": "Rank"
+        },
+        {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Source": "s"
+                  }
+                },
+                "Property": "Sales Amount"
+              }
+            },
+            "Function": 0
+          },
+          "Name": "Sum(Sales.Sales Amount)",
+          "NativeReferenceName": "Sales Amount"
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}
