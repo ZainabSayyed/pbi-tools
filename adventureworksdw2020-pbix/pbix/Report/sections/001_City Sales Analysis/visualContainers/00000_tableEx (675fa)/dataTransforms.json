@@ -1,0 +1,218 @@
+{
+  "projectionOrdering": {
+    "Values": [
+      2,
+      3,
+      0,
+      1
+    ]
+  },
+  "queryMetadata": {
+    "Select": [
+      {
+        "Restatement": "Sales Amount",
+        "Name": "Sum(Sales.Sales Amount)",
+        "Type": 1,
+        "Format": "\"£\"#,0.###############;-\"£\"#,0.###############;\"£\"#,0.###############"
+      },
+      {
+        "Restatement": "Rank",
+        "Name": "Sales.Rank",
+        "Type": 3,
+        "Format": "0"
+      },
+      {
+        "Restatement": "Customer",
+        "Name": "Customer.Customer",
+        "Type": 2048
+      },
+      {
+        "Restatement": "City",
+        "Name": "Customer.City",
+        "Type": 2048,
+        "DataCategory": 2
+      }
+    ],
+    "Filters": [
+      {
+        "type": 0,
+        "expression": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Customer"
+              }
+            },
+            "Property": "Customer"
+          }
+        }
+      },
+      {
+        "type": 2,
+        "expression": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Sales"
+                  }
+                },
+                "Property": "Sales Amount"
+              }
+            },
+            "Function": 0
+          }
+        }
+      },
+      {
+        "type": 2,
+        "expression": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Sales"
+              }
+            },
+            "Property": "Rank"
+          }
+        }
+      },
+      {
+        "type": 0,
+        "expression": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Customer"
+              }
+            },
+            "Property": "City"
+          }
+        }
+      },
+      {
+        "type": 7
+      }
+    ]
+  },
+  "visualElements": [
+    {
+      "DataRoles": [
+        {
+          "Name": "Values",
+          "Projection": 2,
+          "isActive": false
+        },
+        {
+          "Name": "Values",
+          "Projection": 3,
+          "isActive": false
+        },
+        {
+          "Name": "Values",
+          "Projection": 0,
+          "isActive": false
+        },
+        {
+          "Name": "Values",
+          "Projection": 1,
+          "isActive": false
+        }
+      ]
+    }
+  ],
+  "selects": [
+    {
+      "displayName": "Sales Amount",
+      "format": "\"£\"#,0.###############;-\"£\"#,0.###############;\"£\"#,0.###############",
+      "queryName": "Sum(Sales.Sales Amount)",
+      "roles": {
+        "Values": true
+      },
+      "type": {
+        "category": null,
+        "underlyingType": 258
+      },
+      "expr": {
+        "Aggregation": {
+          "Expression": {
+            "Column": {
+              "Expression": {
+                "SourceRef": {
+                  "Entity": "Sales"
+                }
+              },
+              "Property": "Sales Amount"
+            }
+          },
+          "Function": 0
+        }
+      }
+    },
+    {
+      "displayName": "Rank",
+      "format": "0",
+      "queryName": "Sales.Rank",
+      "roles": {
+        "Values": true
+      },
+      "type": {
+        "category": null,
+        "underlyingType": 260
+      },
+      "expr": {
+        "Measure": {
+          "Expression": {
+            "SourceRef": {
+              "Entity": "Sales"
+            }
+          },
+          "Property": "Rank"
+        }
+      }
+    },
+    {
+      "displayName": "Customer",
+      "queryName": "Customer.Customer",
+      "roles": {
+        "Values": true
+      },
+      "type": {
+        "category": null,
+        "underlyingType": 1
+      },
+      "expr": {
+        "Column": {
+          "Expression": {
+            "SourceRef": {
+              "Entity": "Customer"
+            }
+          },
+          "Property": "Customer"
+        }
+      }
+    },
+    {
+      "displayName": "City",
+      "queryName": "Customer.City",
+      "roles": {
+        "Values": true
+      },
+      "type": {
+        "category": "City",
+        "underlyingType": 6620161
+      },
+      "expr": {
+        "Column": {
+          "Expression": {
+            "SourceRef": {
+              "Entity": "Customer"
+            }
+          },
+          "Property": "City"
+        }
+      }
+    }
+  ]
+}
