@@ -1,18 +1,5 @@
 {
   "objects": {
-    "bubbles": [
-      {
-        "properties": {
-          "bubbleSize": {
-            "expr": {
-              "Literal": {
-                "Value": "5L"
-              }
-            }
-          }
-        }
-      }
-    ],
     "dataPoint": [
       {
         "properties": {
@@ -21,8 +8,8 @@
               "color": {
                 "expr": {
                   "ThemeDataColor": {
-                    "ColorId": 4,
-                    "Percent": -0.5
+                    "ColorId": 2,
+                    "Percent": -0.25
                   }
                 }
               }
@@ -36,14 +23,14 @@
     "Category": [
       0
     ],
-    "Size": [
+    "Y": [
       1
     ]
   },
   "projectionActiveItems": {
     "Category": [
       {
-        "queryRef": "Customer.Country-Region",
+        "queryRef": "Customer.City",
         "suppressConcat": false
       }
     ]
@@ -51,10 +38,10 @@
   "queryMetadata": {
     "Select": [
       {
-        "Restatement": "Country-Region",
-        "Name": "Customer.Country-Region",
+        "Restatement": "City",
+        "Name": "Customer.City",
         "Type": 2048,
-        "DataCategory": 5
+        "DataCategory": 2
       },
       {
         "Restatement": "Sales Amount",
@@ -65,35 +52,7 @@
     ],
     "Filters": [
       {
-        "type": 0,
-        "expression": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Customer"
-              }
-            },
-            "Property": "Country-Region"
-          }
-        }
-      },
-      {
-        "type": 2,
-        "expression": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "Sales"
-                  }
-                },
-                "Property": "Sales Amount"
-              }
-            },
-            "Function": 0
-          }
-        }
+        "type": 7
       }
     ]
   },
@@ -106,7 +65,7 @@
           "isActive": true
         },
         {
-          "Name": "Size",
+          "Name": "Y",
           "Projection": 1,
           "isActive": false
         }
@@ -115,14 +74,14 @@
   ],
   "selects": [
     {
-      "displayName": "Country-Region",
-      "queryName": "Customer.Country-Region",
+      "displayName": "City",
+      "queryName": "Customer.City",
       "roles": {
         "Category": true
       },
       "type": {
-        "category": "Country",
-        "underlyingType": 6751233
+        "category": "City",
+        "underlyingType": 6620161
       },
       "expr": {
         "Column": {
@@ -131,7 +90,7 @@
               "Entity": "Customer"
             }
           },
-          "Property": "Country-Region"
+          "Property": "City"
         }
       }
     },
@@ -140,7 +99,7 @@
       "format": "\\$#,0.00;(\\$#,0.00);\\$#,0.00",
       "queryName": "Sum(Sales.Sales Amount)",
       "roles": {
-        "Size": true
+        "Y": true
       },
       "sort": 2,
       "sortOrder": 0,

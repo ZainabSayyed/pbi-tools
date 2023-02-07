@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 RANKX ( ALLSELECTED ( Customer[Customer] ), CALCULATE ( SUM ( Sales[Sales Amount] ) ) )
+=======
+RANKX ( ALLSELECTED ( Customer[Customer] ), CALCULATE ( SUM ( Sales[Sales Amount]) ) )
+>>>>>>> ae14c4e46d401eb11b1ff3ffb06c8f7fb57e4782
