@@ -18,16 +18,33 @@
           ],
           "Select": [
             {
-              "Column": {
+              "HierarchyLevel": {
                 "Expression": {
-                  "SourceRef": {
-                    "Source": "c"
+                  "Hierarchy": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Source": "c"
+                      }
+                    },
+                    "Hierarchy": "Geography"
                   }
                 },
-                "Property": "City"
+                "Level": "Country-Region"
               },
-              "Name": "Customer.City",
-              "NativeReferenceName": "City"
+              "Name": "Customer.Geography.Country-Region",
+              "NativeReferenceName": "Country-Region"
+            },
+            {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Source": "s"
+                  }
+                },
+                "Property": "Rank"
+              },
+              "Name": "Sales.Rank",
+              "NativeReferenceName": "Rank"
             },
             {
               "Aggregation": {
@@ -45,6 +62,18 @@
               },
               "Name": "Sum(Sales.Sales Amount)",
               "NativeReferenceName": "Sales Amount"
+            },
+            {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Source": "c"
+                  }
+                },
+                "Property": "Customer"
+              },
+              "Name": "Customer.Customer",
+              "NativeReferenceName": "Customer"
             }
           ],
           "Where": [
@@ -61,7 +90,7 @@
                                 "Source": "c"
                               }
                             },
-                            "Property": "City"
+                            "Property": "Country-Region"
                           }
                         }
                       ],
@@ -78,26 +107,55 @@
                   }
                 }
               }
-            }
-          ],
-          "OrderBy": [
+            },
             {
-              "Direction": 2,
-              "Expression": {
-                "Aggregation": {
-                  "Expression": {
-                    "Column": {
+              "Condition": {
+                "Comparison": {
+                  "ComparisonKind": 3,
+                  "Left": {
+                    "Measure": {
                       "Expression": {
                         "SourceRef": {
                           "Source": "s"
                         }
                       },
-                      "Property": "Sales Amount"
+                      "Property": "Rank"
                     }
                   },
-                  "Function": 0
+                  "Right": {
+                    "Literal": {
+                      "Value": "6L"
+                    }
+                  }
                 }
-              }
+              },
+              "Target": [
+                {
+                  "HierarchyLevel": {
+                    "Expression": {
+                      "Hierarchy": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Source": "c"
+                          }
+                        },
+                        "Hierarchy": "Geography"
+                      }
+                    },
+                    "Level": "Country-Region"
+                  }
+                },
+                {
+                  "Column": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Source": "c"
+                      }
+                    },
+                    "Property": "Customer"
+                  }
+                }
+              ]
             }
           ]
         },
@@ -107,16 +165,19 @@
               {
                 "Projections": [
                   0,
-                  1
-                ]
+                  1,
+                  2,
+                  3
+                ],
+                "Subtotal": 1
               }
             ]
           },
           "DataReduction": {
-            "DataVolume": 4,
+            "DataVolume": 3,
             "Primary": {
               "Window": {
-                "Count": 1000
+                "Count": 500
               }
             }
           },
