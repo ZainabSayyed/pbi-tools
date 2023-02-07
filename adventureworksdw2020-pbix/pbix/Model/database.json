@@ -1,5 +1,5 @@
 {
-  "name": "Adventure Works DW 2020",
+  "name": "AdvWorksDW2020",
   "compatibilityLevel": 1550,
   "model": {
     "culture": "en-US",
@@ -77,10 +77,6 @@
         "kind": "m",
         "annotations": [
           {
-            "name": "PBI_NavigationStepName",
-            "value": "Navigation"
-          },
-          {
             "name": "PBI_ResultType",
             "value": "Text"
           }
@@ -94,7 +90,7 @@
       },
       {
         "name": "PBIDesktopVersion",
-        "value": "2.103.661.0 (22.03)"
+        "value": "2.114.322.0 (23.02)"
       },
       {
         "name": "PBI_QueryOrder",

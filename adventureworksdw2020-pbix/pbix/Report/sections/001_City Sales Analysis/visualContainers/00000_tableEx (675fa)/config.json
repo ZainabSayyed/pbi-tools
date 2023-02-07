@@ -1,0 +1,105 @@
+{
+  "name": "675faadf8defb068c0b0",
+  "layouts": [
+    {
+      "id": 0,
+      "position": {
+        "x": 10,
+        "y": 419,
+        "width": 746,
+        "height": 301,
+        "z": 1
+      }
+    }
+  ],
+  "singleVisual": {
+    "visualType": "tableEx",
+    "projections": {
+      "Values": [
+        {
+          "queryRef": "Customer.Customer"
+        },
+        {
+          "queryRef": "Customer.City"
+        },
+        {
+          "queryRef": "Sum(Sales.Sales Amount)"
+        },
+        {
+          "queryRef": "Sales.Rank"
+        }
+      ]
+    },
+    "prototypeQuery": {
+      "Version": 2,
+      "From": [
+        {
+          "Name": "s",
+          "Entity": "Sales",
+          "Type": 0
+        },
+        {
+          "Name": "c",
+          "Entity": "Customer",
+          "Type": 0
+        }
+      ],
+      "Select": [
+        {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Source": "s"
+                  }
+                },
+                "Property": "Sales Amount"
+              }
+            },
+            "Function": 0
+          },
+          "Name": "Sum(Sales.Sales Amount)",
+          "NativeReferenceName": "Sales Amount"
+        },
+        {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Source": "s"
+              }
+            },
+            "Property": "Rank"
+          },
+          "Name": "Sales.Rank",
+          "NativeReferenceName": "Rank"
+        },
+        {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Source": "c"
+              }
+            },
+            "Property": "Customer"
+          },
+          "Name": "Customer.Customer",
+          "NativeReferenceName": "Customer"
+        },
+        {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Source": "c"
+              }
+            },
+            "Property": "City"
+          },
+          "Name": "Customer.City",
+          "NativeReferenceName": "City"
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}
