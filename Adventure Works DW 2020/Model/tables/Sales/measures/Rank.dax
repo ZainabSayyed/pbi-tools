@@ -1,1 +1,1 @@
-RANKX ( ALLSELECTED ( Customer[Customer] ), CALCULATE ( SUM ( Sales[Sales Amount]) ) )
+RANKX ( ALLSELECTED ( Customer[Customer] ), CALCULATE ( SUM ( Sales[Sales Amount] ) ) )
