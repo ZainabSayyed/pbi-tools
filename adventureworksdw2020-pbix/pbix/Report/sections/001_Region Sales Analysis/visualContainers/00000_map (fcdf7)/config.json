@@ -1,0 +1,111 @@
+{
+  "name": "fcdf7b96b27e31615765",
+  "layouts": [
+    {
+      "id": 0,
+      "position": {
+        "x": 10.341113105924595,
+        "y": 0,
+        "z": 0,
+        "width": 698.59964093357269,
+        "height": 450.41292639138237
+      }
+    }
+  ],
+  "singleVisual": {
+    "visualType": "map",
+    "projections": {
+      "Category": [
+        {
+          "queryRef": "Customer.Country-Region",
+          "active": true
+        }
+      ],
+      "Size": [
+        {
+          "queryRef": "Sum(Sales.Sales Amount)"
+        }
+      ]
+    },
+    "prototypeQuery": {
+      "Version": 2,
+      "From": [
+        {
+          "Name": "c",
+          "Entity": "Customer",
+          "Type": 0
+        },
+        {
+          "Name": "s",
+          "Entity": "Sales",
+          "Type": 0
+        }
+      ],
+      "Select": [
+        {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Source": "c"
+              }
+            },
+            "Property": "Country-Region"
+          },
+          "Name": "Customer.Country-Region",
+          "NativeReferenceName": "Country-Region"
+        },
+        {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Source": "s"
+                  }
+                },
+                "Property": "Sales Amount"
+              }
+            },
+            "Function": 0
+          },
+          "Name": "Sum(Sales.Sales Amount)",
+          "NativeReferenceName": "Sales Amount"
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true,
+    "objects": {
+      "bubbles": [
+        {
+          "properties": {
+            "bubbleSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "14L"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "dataPoint": [
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 5,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

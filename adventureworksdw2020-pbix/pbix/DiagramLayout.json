@@ -97,7 +97,8 @@
       "zoomValue": 100,
       "pinKeyFieldsToTop": false,
       "showExtraHeaderInfo": false,
-      "hideKeyFieldsWhenCollapsed": false
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
     }
   ],
   "selectedDiagram": "All tables",

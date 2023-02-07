@@ -1,0 +1,105 @@
+{
+  "name": "0cfa0665ada022c4d362",
+  "layouts": [
+    {
+      "id": 0,
+      "position": {
+        "x": 10,
+        "y": 460,
+        "width": 699,
+        "height": 260,
+        "z": 1
+      }
+    }
+  ],
+  "singleVisual": {
+    "visualType": "tableEx",
+    "projections": {
+      "Values": [
+        {
+          "queryRef": "Sales.Rank"
+        },
+        {
+          "queryRef": "Customer.Country-Region"
+        },
+        {
+          "queryRef": "Customer.Customer"
+        },
+        {
+          "queryRef": "Sum(Sales.Sales Amount)"
+        }
+      ]
+    },
+    "prototypeQuery": {
+      "Version": 2,
+      "From": [
+        {
+          "Name": "s",
+          "Entity": "Sales",
+          "Type": 0
+        },
+        {
+          "Name": "c",
+          "Entity": "Customer",
+          "Type": 0
+        }
+      ],
+      "Select": [
+        {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Source": "s"
+              }
+            },
+            "Property": "Rank"
+          },
+          "Name": "Sales.Rank",
+          "NativeReferenceName": "Rank"
+        },
+        {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Source": "s"
+                  }
+                },
+                "Property": "Sales Amount"
+              }
+            },
+            "Function": 0
+          },
+          "Name": "Sum(Sales.Sales Amount)",
+          "NativeReferenceName": "Sales Amount"
+        },
+        {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Source": "c"
+              }
+            },
+            "Property": "Customer"
+          },
+          "Name": "Customer.Customer",
+          "NativeReferenceName": "Customer"
+        },
+        {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Source": "c"
+              }
+            },
+            "Property": "Country-Region"
+          },
+          "Name": "Customer.Country-Region",
+          "NativeReferenceName": "Country-Region"
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

@@ -1,0 +1,217 @@
+{
+  "projectionOrdering": {
+    "Values": [
+      0,
+      3,
+      2,
+      1
+    ]
+  },
+  "queryMetadata": {
+    "Select": [
+      {
+        "Restatement": "Rank",
+        "Name": "Sales.Rank",
+        "Type": 3,
+        "Format": "0"
+      },
+      {
+        "Restatement": "Sales Amount",
+        "Name": "Sum(Sales.Sales Amount)",
+        "Type": 1,
+        "Format": "\"£\"#,0.###############;-\"£\"#,0.###############;\"£\"#,0.###############"
+      },
+      {
+        "Restatement": "Customer",
+        "Name": "Customer.Customer",
+        "Type": 2048
+      },
+      {
+        "Restatement": "Country-Region",
+        "Name": "Customer.Country-Region",
+        "Type": 2048
+      }
+    ],
+    "Filters": [
+      {
+        "type": 2,
+        "expression": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Sales"
+              }
+            },
+            "Property": "Rank"
+          }
+        }
+      },
+      {
+        "type": 0,
+        "expression": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Customer"
+              }
+            },
+            "Property": "Customer"
+          }
+        }
+      },
+      {
+        "type": 0,
+        "expression": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Customer"
+              }
+            },
+            "Property": "Country-Region"
+          }
+        }
+      },
+      {
+        "type": 2,
+        "expression": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Sales"
+                  }
+                },
+                "Property": "Sales Amount"
+              }
+            },
+            "Function": 0
+          }
+        }
+      },
+      {
+        "type": 7
+      }
+    ]
+  },
+  "visualElements": [
+    {
+      "DataRoles": [
+        {
+          "Name": "Values",
+          "Projection": 0,
+          "isActive": false
+        },
+        {
+          "Name": "Values",
+          "Projection": 3,
+          "isActive": false
+        },
+        {
+          "Name": "Values",
+          "Projection": 2,
+          "isActive": false
+        },
+        {
+          "Name": "Values",
+          "Projection": 1,
+          "isActive": false
+        }
+      ]
+    }
+  ],
+  "selects": [
+    {
+      "displayName": "Rank",
+      "format": "0",
+      "queryName": "Sales.Rank",
+      "roles": {
+        "Values": true
+      },
+      "type": {
+        "category": null,
+        "underlyingType": 260
+      },
+      "expr": {
+        "Measure": {
+          "Expression": {
+            "SourceRef": {
+              "Entity": "Sales"
+            }
+          },
+          "Property": "Rank"
+        }
+      }
+    },
+    {
+      "displayName": "Sales Amount",
+      "format": "\"£\"#,0.###############;-\"£\"#,0.###############;\"£\"#,0.###############",
+      "queryName": "Sum(Sales.Sales Amount)",
+      "roles": {
+        "Values": true
+      },
+      "type": {
+        "category": null,
+        "underlyingType": 258
+      },
+      "expr": {
+        "Aggregation": {
+          "Expression": {
+            "Column": {
+              "Expression": {
+                "SourceRef": {
+                  "Entity": "Sales"
+                }
+              },
+              "Property": "Sales Amount"
+            }
+          },
+          "Function": 0
+        }
+      }
+    },
+    {
+      "displayName": "Customer",
+      "queryName": "Customer.Customer",
+      "roles": {
+        "Values": true
+      },
+      "type": {
+        "category": null,
+        "underlyingType": 1
+      },
+      "expr": {
+        "Column": {
+          "Expression": {
+            "SourceRef": {
+              "Entity": "Customer"
+            }
+          },
+          "Property": "Customer"
+        }
+      }
+    },
+    {
+      "displayName": "Country-Region",
+      "queryName": "Customer.Country-Region",
+      "roles": {
+        "Values": true
+      },
+      "type": {
+        "category": null,
+        "underlyingType": 1
+      },
+      "expr": {
+        "Column": {
+          "Expression": {
+            "SourceRef": {
+              "Entity": "Customer"
+            }
+          },
+          "Property": "Country-Region"
+        }
+      }
+    }
+  ]
+}
