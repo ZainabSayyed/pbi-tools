@@ -1,9 +1,5 @@
 {
-<<<<<<< HEAD
-  "name": "Update_the_channel_details",
-=======
   "name": "City_Sales_Analysis_Color_Change",
->>>>>>> a762be205364032ef144f17b8ce758ea3f5f78f2
   "compatibilityLevel": 1550,
   "model": {
     "culture": "en-US",
