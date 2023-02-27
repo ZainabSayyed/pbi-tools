@@ -1,5 +1,5 @@
 {
-  "name": "AdvWorksDW2020",
+  "name": "Product_Order_Analysis",
   "compatibilityLevel": 1550,
   "model": {
     "culture": "en-US",
@@ -90,7 +90,7 @@
       },
       {
         "name": "PBIDesktopVersion",
-        "value": "2.114.322.0 (23.02)"
+        "value": "2.115.323.0"
       },
       {
         "name": "PBI_QueryOrder",
