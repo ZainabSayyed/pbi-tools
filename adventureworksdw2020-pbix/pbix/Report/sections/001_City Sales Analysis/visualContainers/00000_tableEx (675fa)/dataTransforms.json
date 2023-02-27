@@ -35,17 +35,20 @@
     ],
     "Filters": [
       {
-        "type": 0,
+        "type": 2,
         "expression": {
-          "Column": {
+          "Measure": {
             "Expression": {
               "SourceRef": {
-                "Entity": "Customer"
+                "Entity": "Sales"
               }
             },
-            "Property": "Customer"
+            "Property": "Rank"
           }
         }
+      },
+      {
+        "type": 7
       },
       {
         "type": 2,
@@ -66,15 +69,15 @@
         }
       },
       {
-        "type": 2,
+        "type": 0,
         "expression": {
-          "Measure": {
+          "Column": {
             "Expression": {
               "SourceRef": {
-                "Entity": "Sales"
+                "Entity": "Customer"
               }
             },
-            "Property": "Rank"
+            "Property": "Customer"
           }
         }
       },
@@ -90,9 +93,6 @@
             "Property": "City"
           }
         }
-      },
-      {
-        "type": 7
       }
     ]
   },
