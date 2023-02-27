@@ -1,5 +1,5 @@
 {
-  "version": "5.37",
+  "version": "5.42",
   "themeCollection": {
     "baseTheme": {
       "name": "CY19SU12",
@@ -7,7 +7,7 @@
       "type": 2
     }
   },
-  "activeSectionIndex": 3,
+  "activeSectionIndex": 1,
   "defaultDrillFilterOtherVisuals": true,
   "slowDataSourceSettings": {
     "isCrossHighlightingDisabled": false,
@@ -32,6 +32,19 @@
             "expr": {
               "Literal": {
                 "Value": "'Top'"
+              }
+            }
+          }
+        }
+      }
+    ],
+    "outspacePane": [
+      {
+        "properties": {
+          "expanded": {
+            "expr": {
+              "Literal": {
+                "Value": "false"
               }
             }
           }
