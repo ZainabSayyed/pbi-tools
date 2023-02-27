@@ -38,8 +38,7 @@
     ],
     "Size": [
       1
-    ],
-    "Tooltips": []
+    ]
   },
   "projectionActiveItems": {
     "Category": [
@@ -61,39 +60,6 @@
         "Name": "Sum(Sales.Sales Amount)",
         "Type": 1,
         "Format": "\"£\"#,0.###############;-\"£\"#,0.###############;\"£\"#,0.###############"
-      }
-    ],
-    "Filters": [
-      {
-        "type": 0,
-        "expression": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Customer"
-              }
-            },
-            "Property": "Country-Region"
-          }
-        }
-      },
-      {
-        "type": 2,
-        "expression": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "Sales"
-                  }
-                },
-                "Property": "Sales Amount"
-              }
-            },
-            "Function": 0
-          }
-        }
       }
     ]
   },
