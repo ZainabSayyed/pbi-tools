@@ -27,6 +27,9 @@
         },
         {
           "queryRef": "Sales.Rank"
+        },
+        {
+          "queryRef": "Sales Order.Channel"
         }
       ]
     },
@@ -41,6 +44,11 @@
         {
           "Name": "c",
           "Entity": "Customer",
+          "Type": 0
+        },
+        {
+          "Name": "s1",
+          "Entity": "Sales Order",
           "Type": 0
         }
       ],
@@ -97,6 +105,18 @@
           },
           "Name": "Customer.City",
           "NativeReferenceName": "City"
+        },
+        {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Source": "s1"
+              }
+            },
+            "Property": "Channel"
+          },
+          "Name": "Sales Order.Channel",
+          "NativeReferenceName": "Channel"
         }
       ]
     },

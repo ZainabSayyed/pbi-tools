@@ -14,6 +14,11 @@
               "Name": "c",
               "Entity": "Customer",
               "Type": 0
+            },
+            {
+              "Name": "s1",
+              "Entity": "Sales Order",
+              "Type": 0
             }
           ],
           "Select": [
@@ -69,6 +74,18 @@
               },
               "Name": "Customer.City",
               "NativeReferenceName": "City"
+            },
+            {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Source": "s1"
+                  }
+                },
+                "Property": "Channel"
+              },
+              "Name": "Sales Order.Channel",
+              "NativeReferenceName": "Channel"
             }
           ],
           "Where": [
@@ -112,6 +129,16 @@
                       }
                     },
                     "Property": "City"
+                  }
+                },
+                {
+                  "Column": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Source": "s1"
+                      }
+                    },
+                    "Property": "Channel"
                   }
                 }
               ]
@@ -172,7 +199,8 @@
                   0,
                   1,
                   2,
-                  3
+                  3,
+                  4
                 ],
                 "Subtotal": 1
               }
