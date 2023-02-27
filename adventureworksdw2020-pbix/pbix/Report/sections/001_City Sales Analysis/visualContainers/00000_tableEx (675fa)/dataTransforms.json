@@ -55,63 +55,6 @@
       },
       {
         "type": 7
-      },
-      {
-        "type": 2,
-        "expression": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "Sales"
-                  }
-                },
-                "Property": "Sales Amount"
-              }
-            },
-            "Function": 0
-          }
-        }
-      },
-      {
-        "type": 0,
-        "expression": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Customer"
-              }
-            },
-            "Property": "Customer"
-          }
-        }
-      },
-      {
-        "type": 0,
-        "expression": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Customer"
-              }
-            },
-            "Property": "City"
-          }
-        }
-      },
-      {
-        "type": 0,
-        "expression": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Sales Order"
-              }
-            },
-            "Property": "Channel"
-          }
-        }
       }
     ]
   },
