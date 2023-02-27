@@ -4,7 +4,8 @@
       2,
       3,
       0,
-      1
+      1,
+      4
     ]
   },
   "queryMetadata": {
@@ -31,6 +32,11 @@
         "Name": "Customer.City",
         "Type": 2048,
         "DataCategory": 2
+      },
+      {
+        "Restatement": "Channel",
+        "Name": "Sales Order.Channel",
+        "Type": 2048
       }
     ],
     "Filters": [
@@ -49,6 +55,63 @@
       },
       {
         "type": 7
+      },
+      {
+        "type": 2,
+        "expression": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Sales"
+                  }
+                },
+                "Property": "Sales Amount"
+              }
+            },
+            "Function": 0
+          }
+        }
+      },
+      {
+        "type": 0,
+        "expression": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Customer"
+              }
+            },
+            "Property": "Customer"
+          }
+        }
+      },
+      {
+        "type": 0,
+        "expression": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Customer"
+              }
+            },
+            "Property": "City"
+          }
+        }
+      },
+      {
+        "type": 0,
+        "expression": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Sales Order"
+              }
+            },
+            "Property": "Channel"
+          }
+        }
       }
     ]
   },
@@ -73,6 +136,11 @@
         {
           "Name": "Values",
           "Projection": 1,
+          "isActive": false
+        },
+        {
+          "Name": "Values",
+          "Projection": 4,
           "isActive": false
         }
       ]
@@ -167,6 +235,27 @@
             }
           },
           "Property": "City"
+        }
+      }
+    },
+    {
+      "displayName": "Channel",
+      "queryName": "Sales Order.Channel",
+      "roles": {
+        "Values": true
+      },
+      "type": {
+        "category": null,
+        "underlyingType": 1
+      },
+      "expr": {
+        "Column": {
+          "Expression": {
+            "SourceRef": {
+              "Entity": "Sales Order"
+            }
+          },
+          "Property": "Channel"
         }
       }
     }
